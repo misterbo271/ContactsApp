@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- App name -->
+    <string name="app_name">PhoneBook App</string>
+    <string name="user_avatar_description">User avatar</string>
+    <string name="splash_screen_image_description">Splash screen image</string>
+    <string name="no_contacts_image_description">No contacts image</string>
+
+    <string name="mobile_number_static_text">Mobile:</string>
+    <string name="home_number_static_text">Home:</string>
+    <string name="email_static_text">Email:</string>
+    <string name="progress_dialog_title">Please wait!</string>
+    <string name="progress_dialog_content">Loading…</string>
+
+    <string name="contacts_error_message">Ops, something was wrong :D</string>
+    <string name="error_view_click_to_reload_text">Please Reload!</string>
+    <string name="permission_rationale_message">Do you want to allow this app access to your Contacts
+    </string>
+
+</resources>

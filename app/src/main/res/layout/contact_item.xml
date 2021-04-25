@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_view_min_height"
+    app:cardCornerRadius="@dimen/card_view_corner_radius"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="@dimen/card_view_elevation"
+    android:padding="@dimen/card_view_padding"
+    app:cardUseCompatPadding="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/contact_item_layout_margin">
+
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="@dimen/contact_item_image_height"
+            android:layout_height="@dimen/contact_item_image_width"
+            android:contentDescription="@string/user_avatar_description"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_face_male"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/contact_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintLeft_toRightOf="@+id/avatar_image"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"
+            tools:text="Ravi Tamada"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/contact_mobile_number_static_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_secondary_text"
+            android:text="@string/mobile_number_static_text"
+            android:layout_marginTop="@dimen/contact_item_default_dimen"
+            app:layout_constraintTop_toBottomOf="@+id/contact_name_textview"
+            app:layout_constraintLeft_toRightOf="@+id/avatar_image"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"/>
+
+        <TextView
+            android:id="@+id/contact_mobile_number_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_secondary_text"
+            tools:text="+91 0000000000"
+            android:layout_marginTop="@dimen/contact_item_default_dimen"
+            app:layout_constraintTop_toBottomOf="@+id/contact_name_textview"
+            app:layout_constraintLeft_toRightOf="@+id/contact_mobile_number_static_textview"
+            android:layout_marginLeft="@dimen/contact_item_static_textview_margin"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"/>
+
+        <TextView
+            android:id="@+id/contact_home_number_static_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_secondary_text"
+            android:text="@string/home_number_static_text"
+            android:layout_marginTop="@dimen/contact_item_default_dimen"
+            app:layout_constraintTop_toBottomOf="@+id/contact_mobile_number_static_textview"
+            app:layout_constraintLeft_toRightOf="@+id/avatar_image"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"/>
+
+        <TextView
+            android:id="@+id/contact_home_number_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_secondary_text"
+            tools:text="00 000000"
+            android:layout_marginTop="@dimen/contact_item_default_dimen"
+            app:layout_constraintTop_toBottomOf="@+id/contact_mobile_number_textview"
+            app:layout_constraintLeft_toRightOf="@+id/contact_home_number_static_textview"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"/>
+
+
+        <TextView
+            android:id="@+id/contact_email_static_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_secondary_text"
+            android:text="@string/email_static_text"
+            android:layout_marginTop="@dimen/contact_item_default_dimen"
+            app:layout_constraintTop_toBottomOf="@+id/contact_home_number_textview"
+            app:layout_constraintLeft_toRightOf="@+id/avatar_image"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"/>
+
+        <TextView
+            android:id="@+id/contact_email_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_secondary_text"
+            tools:text="ravi@gmail.com"
+            android:layout_marginTop="@dimen/contact_item_default_dimen"
+            app:layout_constraintTop_toBottomOf="@+id/contact_home_number_textview"
+            app:layout_constraintLeft_toRightOf="@+id/contact_email_static_textview"
+            android:layout_marginLeft="@dimen/contact_item_default_dimen"
+            android:layout_marginStart="@dimen/contact_item_default_dimen"/>
+
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_height="38dp"
+            android:layout_width="1dp"
+            android:background="@color/color_secondary_text"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/call_button"
+            android:layout_marginRight="@dimen/contact_item_divider_margin"
+            android:layout_marginEnd="@dimen/contact_item_divider_margin"/>
+
+        <ImageButton
+            android:id="@+id/call_button"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_phone"
+            android:background="?selectableItemBackground"
+            android:layout_marginRight="@dimen/contact_item_default_dimen"
+            android:layout_marginEnd="@dimen/contact_item_default_dimen"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/contact_item_divider_margin"
+            android:layout_marginLeft="@dimen/contact_item_divider_margin"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

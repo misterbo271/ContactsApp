@@ -1,0 +1,35 @@
+package com.mienpv.contacts.ui.adapter;
+import java.util.ArrayList;
+import java.util.List;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+
+
+public class ContactsFragmentPagerAdapter extends FragmentPagerAdapter{
+    private final List<Fragment> mFragmentList = new ArrayList<>();
+
+    public ContactsFragmentPagerAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        return mFragmentList.get(position);
+    }
+
+    @Override
+    public int getCount() {
+        return mFragmentList.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        // return null to display only the icon
+        return null;
+    }
+
+    public void addFrag(Fragment fragment) {
+        mFragmentList.add(fragment);
+    }
+}
